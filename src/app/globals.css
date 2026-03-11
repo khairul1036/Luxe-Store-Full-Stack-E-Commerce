@@ -1,27 +1,33 @@
 @import "tailwindcss";
 
 @theme {
-  /* Brand colors */
-  --color-brand-50: #eef2ff;
-  --color-brand-100: #e0e7ff;
-  --color-brand-500: #6366f1;
-  --color-brand-600: #4f46e5;
-  --color-brand-700: #4338ca;
-  --color-brand-900: #1e1b4b;
+  /* ── Primary — Blush Rose ── */
+  --color-primary: #e8857a;
+  --color-primary-dark: #d4695d;
+  --color-primary-light: #fde8e6;
+  --color-primary-muted: #f5c4bf;
 
-  /* Font */
-  --font-sans: var(--font-inter);
+  /* ── Secondary — Champagne Gold ── */
+  --color-secondary: #c9a96e;
+  --color-secondary-dark: #a8833d;
+  --color-secondary-light: #f5e6c8;
 
-  /* Border radius */
+  /* ── Neutrals ── */
+  --color-neutral-900: #1c1410;
+  --color-neutral-700: #3d2f2a;
+  --color-neutral-600: #6b5f5a;
+  --color-neutral-400: #a89490;
+  --color-neutral-300: #e8ddd9;
+  --color-neutral-100: #fdf8f5;
+  --color-neutral-50: #ffffff;
+
+  /* ── Font ── */
+
+  --font-inter: var(--font-inter); /* body text */
+  --font-playfair: var(--font-playfair); /* headings, logo */
+
+  /* ── Radius ── */
   --radius: 0.5rem;
-
-  /* Light mode semantic tokens */
-  --color-background: #ffffff;
-  --color-surface: #f9fafb;
-  --color-border: #e5e7eb;
-  --color-text-primary: #111827;
-  --color-text-secondary: #6b7280;
-  --color-text-muted: #9ca3af;
 }
 
 @layer base {
@@ -34,25 +40,27 @@
   /* Light mode */
   :root {
     color-scheme: light;
-    --bg: #ffffff;
-    --bg-surface: #f9fafb;
-    --bg-subtle: #f3f4f6;
-    --border: #e5e7eb;
-    --text: #111827;
-    --text-secondary: #6b7280;
-    --text-muted: #9ca3af;
+    --bg: #fdf8f5;
+    --bg-surface: #ffffff;
+    --bg-subtle: #faf3ef;
+    --bg-accent: #f5e6c8;
+    --border: #e8ddd9;
+    --text: #1c1410;
+    --text-secondary: #6b5f5a;
+    --text-muted: #a89490;
   }
 
   /* Dark mode */
   :root.dark {
     color-scheme: dark;
-    --bg: #0f0f0f;
-    --bg-surface: #1a1a1a;
-    --bg-subtle: #262626;
-    --border: #2e2e2e;
-    --text: #f5f5f5;
-    --text-secondary: #a3a3a3;
-    --text-muted: #737373;
+    --bg: #120e0c;
+    --bg-surface: #1e1612;
+    --bg-subtle: #2a1f1a;
+    --bg-accent: #2e1f10;
+    --border: #3d2a22;
+    --text: #fdf0eb;
+    --text-secondary: #c9a99e;
+    --text-muted: #8c6a62;
   }
 
   body {
@@ -61,24 +69,30 @@
     @apply font-sans antialiased transition-colors duration-300;
   }
 
-  /* Scrollbar — light */
+  /* Selection */
+  ::selection {
+    background-color: #e8857a;
+    color: #ffffff;
+  }
+
+  /* Scrollbar */
   ::-webkit-scrollbar {
-    width: 6px;
+    width: 5px;
   }
   ::-webkit-scrollbar-track {
     background: var(--bg-subtle);
   }
   ::-webkit-scrollbar-thumb {
-    background: var(--border);
+    background: #e8857a;
     border-radius: 999px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: var(--text-muted);
+    background: #d4695d;
   }
 }
 
 @layer utilities {
-  /* Use these classes throughout your components */
+  /* Backgrounds */
   .bg-app {
     background-color: var(--bg);
   }
@@ -88,9 +102,16 @@
   .bg-subtle {
     background-color: var(--bg-subtle);
   }
+  .bg-accent {
+    background-color: var(--bg-accent);
+  }
+
+  /* Borders */
   .border-app {
     border-color: var(--border);
   }
+
+  /* Text */
   .text-app {
     color: var(--text);
   }
@@ -99,5 +120,48 @@
   }
   .text-muted {
     color: var(--text-muted);
+  }
+
+  /* Primary button — Blush */
+  .btn-primary {
+    background-color: #e8857a;
+    color: #ffffff;
+    @apply cursor-pointer rounded-lg px-5 py-2.5 text-sm font-medium transition-all duration-200 hover:bg-[#d4695d] active:scale-95;
+  }
+
+  /* Secondary button — Champagne outline */
+  .btn-outline {
+    background-color: transparent;
+    border: 1px solid #c9a96e;
+    color: #c9a96e;
+    @apply cursor-pointer rounded-lg px-5 py-2.5 text-sm font-medium transition-all duration-200 hover:bg-[#f5e6c8] active:scale-95;
+  }
+
+  /* Ghost button */
+  .btn-ghost {
+    background-color: transparent;
+    color: var(--text-secondary);
+    @apply cursor-pointer rounded-lg px-5 py-2.5 text-sm font-medium transition-all duration-200 active:scale-95;
+  }
+
+  .btn-ghost:hover {
+    background-color: var(--bg-subtle);
+  }
+
+  /* Card */
+  .card {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border);
+    @apply rounded-xl p-5 transition-shadow duration-200 hover:shadow-md;
+  }
+
+  /* Gold accent text */
+  .text-gold {
+    color: #c9a96e;
+  }
+
+  /* Blush accent text */
+  .text-blush {
+    color: #e8857a;
   }
 }
