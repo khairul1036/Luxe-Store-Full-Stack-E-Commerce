@@ -4,6 +4,8 @@ import "./globals.css";
 import { SITE_NAME } from "@/config/constants";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import Navbar from "@/components/Navbar";
+import Sidebar from "@/components/Sidebar";
+import Layout from "@/components/Layout";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair" });
@@ -18,7 +20,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${inter.variable} ${playfair.variable} font-sans antialiased`}>
         <ThemeProvider>
-          <Navbar></Navbar>
+          <Layout></Layout>
           {children}
         </ThemeProvider>
       </body>
