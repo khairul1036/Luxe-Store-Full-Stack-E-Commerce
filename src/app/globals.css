@@ -22,9 +22,8 @@
   --color-neutral-50: #ffffff;
 
   /* ── Font ── */
-
-  --font-inter: var(--font-inter); /* body text */
-  --font-playfair: var(--font-playfair); /* headings, logo */
+  --font-inter: var(--font-inter);
+  --font-playfair: var(--font-playfair);
 
   /* ── Radius ── */
   --radius: 0.5rem;
@@ -61,6 +60,26 @@
     --text: #fdf0eb;
     --text-secondary: #c9a99e;
     --text-muted: #8c6a62;
+
+    /* Primary — Blush Rose (dark mode) */
+    --color-primary: #f0a098;
+    --color-primary-dark: #e8857a;
+    --color-primary-light: #3d1f1c;
+    --color-primary-muted: #5c2e2a;
+
+    /* Secondary — Champagne Gold (dark mode) */
+    --color-secondary: #d4b47a;
+    --color-secondary-dark: #c9a96e;
+    --color-secondary-light: #2e2010;
+
+    /* Neutrals (dark mode) */
+    --color-neutral-900: #fdf0eb;
+    --color-neutral-700: #d4b8b0;
+    --color-neutral-600: #b09088;
+    --color-neutral-400: #6b4f48;
+    --color-neutral-300: #3d2a22;
+    --color-neutral-100: #1e1612;
+    --color-neutral-50: #120e0c;
   }
 
   body {

@@ -1,4 +1,5 @@
 import { CircleUser, MapPin, Search, ShoppingCart, SquareChevronRight } from "lucide-react";
+import Link from "next/link";
 import React from "react";
 
 const Navbar = ({ onMenuClick }) => {
@@ -9,12 +10,14 @@ const Navbar = ({ onMenuClick }) => {
       <div onClick={onMenuClick} className="cursor-pointer">
         <SquareChevronRight />
       </div>
-      <h1 className="font-playfair cursor-pointer text-3xl font-semibold">
-        Luxe-{" "}
-        <span className="text-secondary-dark hover:text-secondary ease-in-out hover:transition-all hover:duration-300">
-          Store
-        </span>
-      </h1>
+      <Link href="/">
+        <h1 className="font-playfair cursor-pointer text-3xl font-semibold">
+          Luxe-{" "}
+          <span className="text-secondary-dark hover:text-secondary ease-in-out hover:transition-all hover:duration-300">
+            Store
+          </span>
+        </h1>
+      </Link>
       <div className="flex flex-1 justify-center">
         <div className="relative w-1/2">
           <input
