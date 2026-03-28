@@ -20,10 +20,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${inter.variable} ${playfair.variable} font-sans antialiased`}>
         <ThemeProvider>
-          <Layout>
-            {children}
-          </Layout>
-          
+          <Layout>{children}</Layout>
         </ThemeProvider>
       </body>
     </html>

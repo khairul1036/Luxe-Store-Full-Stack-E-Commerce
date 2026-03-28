@@ -41,7 +41,7 @@ export default function HeroCarousel() {
   const next = () => setCurrent(current === slides.length - 1 ? 0 : current + 1);
 
   return (
-    <div className="from-primary-muted to-secondary-light relative overflow-hidden rounded-[32px] bg-gradient-to-r">
+    <div className="from-primary-muted to-secondary-light relative overflow-hidden rounded-[32px] bg-gradient-to-r ">
       {/* Slides */}
       <div
         className="flex transition-transform duration-500"
@@ -64,14 +64,14 @@ export default function HeroCarousel() {
             </div>
 
             {/* Content */}
-            <div className="text-white">
+            <div className="text-primary">
               <h1 className="text-2xl leading-tight font-bold tracking-tight sm:text-3xl lg:text-4xl">
                 {slide.title}{" "}
                 <span className="font-playfair font-semibold italic">{slide.highlight}</span> <br />
                 {slide.title2}{" "}
               </h1>
 
-              <p className="mt-3 max-w-lg text-sm font-medium text-white/90 sm:mt-4 sm:text-base">
+              <p className="mt-3 max-w-lg text-sm font-medium text-primary sm:mt-4 sm:text-base">
                 {slide.description}
               </p>
 

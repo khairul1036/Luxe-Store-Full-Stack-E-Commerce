@@ -6,14 +6,14 @@ const Navbar = ({ onMenuClick }) => {
   const iconClass =
     "border-primary-muted h-10 w-10 rounded-full border p-2 shadow-sm ease-in-out hover:scale-105 hover:transition-all hover:duration-500";
   return (
-    <div className="bg-primary-light/20 text-primary-dark border-primary flex w-full items-center justify-between gap-2 border-b px-6 py-5 shadow-md shadow-sky-50">
+    <div className="bg-primary-light/20 text-primary-muted border-primary flex w-full items-center justify-between gap-2 border-b px-6 py-5 shadow-md shadow-sky-50">
       <div onClick={onMenuClick} className="cursor-pointer">
         <SquareChevronRight />
       </div>
       <Link href="/">
         <h1 className="font-playfair cursor-pointer text-3xl font-semibold">
           Luxe-{" "}
-          <span className="text-secondary-dark hover:text-secondary ease-in-out hover:transition-all hover:duration-300">
+          <span className="text-secondary-light hover:text-secondary ease-in-out hover:transition-all hover:duration-300">
             Store
           </span>
         </h1>
@@ -32,8 +32,8 @@ const Navbar = ({ onMenuClick }) => {
           </button>
         </div>
       </div>
-      <div className="flex items-center gap-3">
-        <button className="border-primary hover:bg-primary hover:text-primary-light cursor-pointer rounded-full border px-4 py-1.5 text-lg font-bold transition-all duration-300 hover:scale-105">
+      <div className="flex items-center gap-3 cursor-pointer">
+        <button className="border-primary hover:bg-primary hover:text-primary-muted  rounded-full cursor-pointer border px-4 py-1.5 text-lg font-bold transition-all duration-300 hover:scale-105">
           Sign In
         </button>
         <ShoppingCart className={iconClass} />
