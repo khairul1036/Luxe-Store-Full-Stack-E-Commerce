@@ -1,0 +1,130 @@
+const AllCategory = [
+  {
+    id: 1,
+    slug: "womens-clothing",
+    label: "Women's Clothing",
+    icon: "👗",
+    image: "/assets/categories/womens-clothing.jpg",
+    description: "Trendy outfits for every occasion and style.",
+  },
+  {
+    id: 2,
+    slug: "mens-clothing",
+    label: "Men's Clothing",
+    icon: "👔",
+    image: "/assets/categories/mens-clothing.jpg",
+    description: "Smart, casual, and formal wear for men.",
+  },
+  {
+    id: 3,
+    slug: "handbags-purses",
+    label: "Handbags & Purses",
+    icon: "👜",
+    image: "/assets/categories/handbags.jpg",
+    description: "Stylish bags to complete your everyday look.",
+  },
+  {
+    id: 4,
+    slug: "shoes-footwear",
+    label: "Shoes & Footwear",
+    icon: "👠",
+    image: "/assets/categories/shoes.jpg",
+    description: "Comfortable and fashionable footwear collection.",
+  },
+  {
+    id: 5,
+    slug: "jewelry",
+    label: "Jewelry",
+    icon: "💍",
+    image: "/assets/categories/jewelry.jpg",
+    description: "Elegant pieces to add sparkle to your style.",
+  },
+  {
+    id: 6,
+    slug: "watches",
+    label: "Watches",
+    icon: "⌚",
+    image: "/assets/categories/watches.jpg",
+    description: "Timeless designs for every moment.",
+  },
+  {
+    id: 7,
+    slug: "sunglasses-eyewear",
+    label: "Sunglasses & Eyewear",
+    icon: "🕶️",
+    image: "/assets/categories/sunglasses.jpg",
+    description: "Protect your eyes with style and clarity.",
+  },
+  {
+    id: 8,
+    slug: "scarves-wraps",
+    label: "Scarves & Wraps",
+    icon: "🧣",
+    image: "/assets/categories/scarves.jpg",
+    description: "Add warmth and elegance to your outfit.",
+  },
+  {
+    id: 9,
+    slug: "belts-wallets",
+    label: "Belts & Wallets",
+    icon: "👛",
+    image: "/assets/categories/belts-wallets.jpg",
+    description: "Functional accessories with modern design.",
+  },
+  {
+    id: 10,
+    slug: "activewear",
+    label: "Activewear",
+    icon: "🏃",
+    image: "/assets/categories/activewear.jpg",
+    description: "Performance wear for workouts and active life.",
+  },
+  {
+    id: 11,
+    slug: "ethnic-traditional",
+    label: "Ethnic & Traditional",
+    icon: "🥻",
+    image: "/assets/categories/ethnic.jpg",
+    description: "Celebrate culture with traditional fashion.",
+  },
+  {
+    id: 12,
+    slug: "kids-fashion",
+    label: "Kids' Fashion",
+    icon: "🧒",
+    image: "/assets/categories/kids.jpg",
+    description: "Cute and comfy styles for little ones.",
+  },
+  {
+    id: 13,
+    slug: "hats-caps",
+    label: "Hats & Caps",
+    icon: "🧢",
+    image: "/assets/categories/hats.jpg",
+    description: "Top off your look with trendy headwear.",
+  },
+  {
+    id: 14,
+    slug: "lingerie-innerwear",
+    label: "Lingerie & Innerwear",
+    icon: "🩱",
+    image: "/assets/categories/lingerie.jpg",
+    description: "Comfortable essentials with a stylish touch.",
+  },
+  {
+    id: 15,
+    slug: "beauty-fragrance",
+    label: "Beauty & Fragrance",
+    icon: "🌸",
+    image: "/assets/categories/beauty.jpg",
+    description: "Enhance your beauty with premium products.",
+  },
+];
+
+export const getCategories = async () => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(AllCategory.filter((cat) => cat.sort((a, b) => a.id - b.id)));
+    }, 300);
+  });
+};

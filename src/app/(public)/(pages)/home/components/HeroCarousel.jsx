@@ -13,7 +13,7 @@ const slides = [
     description:
       "Explore our exclusive collection of premium fashion and accessories, handpicked from the world's finest labels — delivered straight to your door.",
     button: "Shop the Collection",
-    image: "/images/hero11.png",
+    image: "/images/hero2.png",
   },
   {
     title: "Timeless Pieces,",
@@ -21,7 +21,7 @@ const slides = [
     description:
       "From statement jewellery to couture-inspired clothing, indulge in fashion that speaks without words.",
     button: "Explore Lookbook",
-    image: "/images/hero11.png",
+    image: "/images/hero3.png",
   },
   {
     title: "Exclusively Yours,",
@@ -29,7 +29,7 @@ const slides = [
     description:
       "New arrivals every week — stay ahead of trends with our carefully curated seasonal edits.",
     button: "View New Arrivals",
-    image: "/images/hero11.png",
+    image: "/images/hero4.png",
   },
 ];
 
@@ -41,7 +41,7 @@ export default function HeroCarousel() {
   const next = () => setCurrent(current === slides.length - 1 ? 0 : current + 1);
 
   return (
-    <div className="from-primary-muted to-secondary-light relative overflow-hidden rounded-[32px] bg-gradient-to-r ">
+    <div className="from-primary-muted to-secondary-light relative overflow-hidden rounded-4xl bg-linear-to-r">
       {/* Slides */}
       <div
         className="flex transition-transform duration-500"
@@ -57,9 +57,9 @@ export default function HeroCarousel() {
               <Image
                 src={slide.image}
                 alt="Medicine"
-                width={420}
-                height={420}
-                className="w-64 max-w-md object-contain sm:w-72 lg:w-full"
+                width={1000}
+                height={1000}
+                className="w-80 max-w-xl object-contain sm:w-72 lg:w-full"
               />
             </div>
 
@@ -71,7 +71,7 @@ export default function HeroCarousel() {
                 {slide.title2}{" "}
               </h1>
 
-              <p className="mt-3 max-w-lg text-sm font-medium text-primary sm:mt-4 sm:text-base">
+              <p className="text-primary mt-3 max-w-lg text-sm font-medium sm:mt-4 sm:text-base">
                 {slide.description}
               </p>
 
