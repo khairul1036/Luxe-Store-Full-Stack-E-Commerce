@@ -1,9 +1,11 @@
 "use client";
+import { useAllCategory } from "@/app/(public)/hooks/useAllCategory";
 import { ChessQueen, ChevronRight, SquareChevronLeft } from "lucide-react";
 import Image from "next/image";
 import React, { useState } from "react";
 
 const Sidebar = ({ onCloseClick, openSidebar }) => {
+  const { categories, loading, error } = useAllCategory();
   return (
     <div
       className={`bg-primary-light border-primary/30 h-full overflow-y-auto border-r text-center shadow-sm transition-all duration-300 ease-in-out ${openSidebar ? "w-full p-5 opacity-100" : "w-0 opacity-0"}`}
@@ -19,7 +21,7 @@ const Sidebar = ({ onCloseClick, openSidebar }) => {
       </h1>
       {/* product category listing  */}
 
-      {AllCategory.map((category) => (
+      {categories.map((category) => (
         <div
           key={category.id}
           className="border-primary-muted shadow-primary-light text-primary-dark mt-5 flex w-[90%] cursor-pointer items-center justify-between rounded-full border px-4 py-2.5 text-lg font-semibold transition-all duration-300 ease-in-out hover:scale-105"
